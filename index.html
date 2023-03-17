@@ -64,11 +64,12 @@
                         <p class="pb-2 inline-flex items-center gap-2">Area (A) = w <i class="fa-solid fa-xmark"></i> l</p>
                       </p>
                       <div class="flex justify-between items-center gap-3 text-gray-500">
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="w"> cm</p>
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="l"> cm</p>
+                        <p class="flex gap-1"><input id="rectangle-width" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="w"> cm</p>
+                        <p class="flex gap-1"><input id="rectangle-length" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="l"> cm</p>
                       </div>
                       <div class="card-actions pt-4">
-                        <button class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
+                        <!-- calculateArea  input -> function name, first input, second input -->
+                        <button onclick="calculateArea('rectangleCal', 'rectangle-width', 'rectangle-length')" class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -83,11 +84,12 @@
                         <p class="pb-2 inline-flex items-center gap-2">Area (A) = b <i class="fa-solid fa-xmark"></i> h</p>
                       </p>
                       <div class="flex justify-between items-center gap-3 text-gray-500">
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="b"> cm</p>
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="h"> cm</p>
+                        <p class="flex gap-1"><input id="parallelogram-base" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="b"> cm</p>
+                        <p class="flex gap-1"><input id="parallelogram-height" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="h"> cm</p>
                       </div>
                       <div class="card-actions pt-4">
-                        <button class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
+                        <!-- calculateArea  input -> function name, first input, second input -->
+                        <button onclick="calculateArea('parallelogramCal', 'parallelogram-base', 'parallelogram-height')" class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -102,11 +104,12 @@
                         <p class="pb-2 inline-flex items-center gap-2">Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> <span>d<sub>1</sub></span> <i class="fa-solid fa-xmark"></i> <span>d<sub>2</sub></span></p>
                       </p>
                       <div class="flex justify-between items-center gap-3 text-gray-500">
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="d1"> cm</p>
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="d2"> cm</p>
+                        <p class="flex gap-1"><input id="rhombus-d1" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="d1"> cm</p>
+                        <p class="flex gap-1"><input id="rhombus-d2" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="d2"> cm</p>
                       </div>
                       <div class="card-actions pt-4">
-                        <button class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
+                        <!-- calculateArea  input -> function name, first input, second input -->
+                        <button onclick="calculateArea('rhombusCal', 'rhombus-d1', 'rhombus-d2')" class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -121,11 +124,12 @@
                         <p class="pb-2 inline-flex items-center gap-2">Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> p <i class="fa-solid fa-xmark"></i> b</p>
                       </p>
                       <div class="flex justify-between items-center gap-3 text-gray-500">
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="p"> cm</p>
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="b"> cm</p>
+                        <p class="flex gap-1"><input id="pentagon-p" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="p"> cm</p>
+                        <p class="flex gap-1"><input id="pentagon-b" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="b"> cm</p>
                       </div>
                       <div class="card-actions pt-4">
-                        <button class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
+                        <!-- calculateArea  input -> function name, first input, second input -->
+                        <button onclick="calculateArea('pentagonCal', 'pentagon-p', 'pentagon-b')" class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -140,11 +144,12 @@
                         <p class="pb-2 inline-flex items-center gap-2">Area (A) = <img src="images/pi.png" alt="pi">ab</i></p>
                       </p>
                       <div class="flex justify-between items-center gap-3 text-gray-500">
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="a"> cm</p>
-                        <p class="flex gap-1"><input class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="b"> cm</p>
+                        <p class="flex gap-1"><input id="ellipse-a" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="a"> cm</p>
+                        <p class="flex gap-1"><input id="ellipse-b" class="w-full py-1 px-2 rounded-lg bg-gray-200 text-black" type="number" placeholder="b"> cm</p>
                       </div>
                       <div class="card-actions pt-4">
-                        <button class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
+                        <!-- calculateArea  input -> function name, first input, second input -->
+                        <button onclick="calculateArea('ellipseCal', 'ellipse-a', 'ellipse-b')" class="btn btn-info w-full rounded-lg text-white font-bold">Calculate</button>
                       </div>
                     </div>
                 </div>
