@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <header class="max-w-[1920px] mx-auto px-6 py-3 bg-sky-100 flex justify-between items-center">
+        <!-- logo -->
+        <div>
+            <a href="index.html">
+                <h2 class="text-3xl font-bold text-gray-700">Interactive</h2>
+                <p class="text-gray-500 text-lg">Geometry Genius</p>
+                </a>
+        </div>
+        <!-- blog page link -->
+        <p>
+            <a class="btn bg-info border-0 w-36 rounded-full" href="blog.html">Blog</a>
+        </p>
+    </header>
+    <!-- main -->
+    <main>
+        <section class="flex justify-center items-center" style="height: 75vh;">
+            <p id="blog-title" class="text-4xl font-bold text-sky-100">Blog is Empty</p>
+        </section>
+    </main>
+
+    <!-- script -->
+    <script>
+        let i = 1;
+        const blogTitle = document.getElementById('blog-title')
+        setInterval(() => {
+            if(i === 1) {
+                blogTitle.classList.remove('text-sky-100');
+                blogTitle.classList.add('text-sky-200');
+                i++;
+            } else {
+                blogTitle.classList.remove('text-sky-200');
+                blogTitle.classList.add('text-sky-100');
+                i = 1;
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
