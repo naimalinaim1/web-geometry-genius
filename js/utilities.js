@@ -45,8 +45,7 @@ const displayArea = (itemName, value) => {
   const disableId = "disabled" + itemName + value;
   tr.innerHTML = `
     <tr>
-        <th>${indexNum}</th>
-        <td>${itemName}</td>
+        <td><strong>${indexNum}</strong> ${itemName}</td>
         <td><span id="${uniqueConvertID}">${value}</span> <span id="${convertOption}">cm</span><sup>2</sup></td>
         <td><p id="${disableId}" onclick="convertCmToMeter('${uniqueConvertID}','${convertOption}', '${value}', '${disableId}')" class="bg-info text-white rounded-lg px-2 py-1 cursor-pointer">Convert to m<sup>2</sup></p></td>
         <td><i id="${uniqueDeleteId}" class="fa-solid fa-xmark text-red-500 cursor-pointer text-xl"></i></td>
