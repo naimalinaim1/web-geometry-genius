@@ -29,7 +29,7 @@ const twoDecimal = (value) => {
   return Number(value.toFixed(2));
 };
 
-// convert and display 
+// convert and display
 const convertAndDisplay = (itemName, value) => {
   const result = twoDecimal(value);
   displayArea(itemName, result);
@@ -39,13 +39,38 @@ const convertAndDisplay = (itemName, value) => {
 const displayArea = (itemName, value) => {
   const containerEl = getEl("calculate-area-container");
   const tr = document.createElement("tr");
+  const uniqueDeleteId = "delete" + itemName + value;
+  const uniqueConvertID = "convert" + itemName + value;
+  const convertOption = "option" + itemName + value;
+  const disableId = "disabled" + itemName + value;
   tr.innerHTML = `
     <tr>
         <th>${indexNum}</th>
         <td>${itemName}</td>
-        <td><span>${value}</span> cm<sup>2</sup></td>
-        <td><p class="bg-info text-white rounded-lg px-2 py-1 cursor-pointer">Convert to m<sup>2</sup></p></td>
+        <td><span id="${uniqueConvertID}">${value}</span> <span id="${convertOption}">cm</span><sup>2</sup></td>
+        <td><p id="${disableId}" onclick="convertCmToMeter('${uniqueConvertID}','${convertOption}', '${value}', '${disableId}')" class="bg-info text-white rounded-lg px-2 py-1 cursor-pointer">Convert to m<sup>2</sup></p></td>
+        <td><i id="${uniqueDeleteId}" class="fa-solid fa-xmark text-red-500 cursor-pointer text-xl"></i></td>
     </tr>
     `;
   containerEl.appendChild(tr);
+  // delete element
+  deleteUserCalculation(uniqueDeleteId);
+};
+
+// delete one element user calculation result
+const deleteUserCalculation = (eleId) => {
+  document.getElementById(eleId).addEventListener("click", (e) => {
+    e.target.parentNode.parentNode.parentNode.removeChild(
+      e.target.parentNode.parentNode
+    );
+  });
+};
+
+// convert cm to meter
+const convertCmToMeter = (eleId, optionID, value, disableId) => {
+  value = twoDecimal(value / 100);
+  getEl(optionID).innerText = "m";
+  getEl(eleId).innerText = value;
+  getEl(disableId).setAttribute('disabled', true);
+  getEl(disableId).classList.add('bg-gray-500');
 };
